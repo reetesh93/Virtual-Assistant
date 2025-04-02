@@ -34,25 +34,51 @@ h1{
 #voice{
     width: 100px;
     display: none;
-   
 }
 #btn{
-width: 30%;
-background: linear-gradient(to right,rgb(21, 145, 207),rgb(201, 41, 116));
-padding: 10px;
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 10px;
-font-size: 20px;
-border-radius: 20px;
-color: white;
-box-shadow: 2px 2px 10px rgb(21, 145, 207),2px 2px 10px rgb(201, 41, 116);
-border: none;
-transition: all 0.5s;
-cursor: pointer;
+    width: 30%;
+    background: linear-gradient(to right,rgb(21, 145, 207),rgb(201, 41, 116));
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 2px 2px 10px rgb(21, 145, 207),2px 2px 10px rgb(201, 41, 116);
+    border: none;
+    transition: all 0.5s;
+    cursor: pointer;
 }
 #btn:hover{
     box-shadow: 2px 2px 20px rgb(21, 145, 207),2px 2px 20px rgb(201, 41, 116);
     letter-spacing: 2px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #logo {
+        width: 40vw; /* Increase logo size on smaller screens */
+    }
+    #btn {
+        width: 80%; /* Make button wider on smaller screens */
+        font-size: 18px; /* Adjust font size */
+    }
+    #name, #va {
+        font-size: 30px; /* Decrease font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        flex-direction: column; /* Stack elements vertically */
+        gap: 15px; /* Reduce gap between elements */
+    }
+    #btn {
+        font-size: 16px; /* Further adjust button font size */
+    }
+    #name, #va {
+        font-size: 24px; /* Further decrease font size */
+    }
 }
